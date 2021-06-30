@@ -1,15 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PITNEREST FROM EHER v0.1</title>
 </head>
-<body>
-    <H5>BUENO AHI VAMOS!</H5>
-    <div class="container">
 
+<body>
+    <!-- <H5> AHI VAMOS!</H5> -->
+    <div class="container">
+        <div class="row">
+            <div class="card-columns"></div>
+            <% imagenes.forEach(function (img){ %>
+                <h5>
+                    <%= img.path %>
+                </h5>
+                <div class="card">
+                    <img src="<%= img.path %>" alt="" />
+                    <div class="card-body">
+                        <h5 class="card-title"><%= img.title %></h5>
+                        <p class="card-text"><%= img.description %></p>
+                    </div>
+                </div>
+                <% }) %>
+        </div>
+    </div>
     </div>
 </body>
+
 </html>
