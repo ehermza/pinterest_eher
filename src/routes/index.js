@@ -24,7 +24,7 @@ router.post("/upload", async (req, res) => {
     image.title = req.body.title;
     image.description = req.body.description;
     image.filename = req.file.filename;
-    image.path = ("/upload/images/"+ req.file.filename);
+    image.path = path.resolve("/images/"+ req.file.filename);
     image.mimetype = req.file.mimetype;
     image.size = req.file.size;
     
